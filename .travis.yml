@@ -10,7 +10,7 @@ cache:
     - yarn build
   deploy:
     provider: pages
-    edge: true,
+    edge: true
     skip-cleanup: true
     keep-history: true
     github-token: $GITHUB-TOKEN
