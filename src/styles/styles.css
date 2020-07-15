@@ -1,14 +1,20 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
 
 body {
   margin: 0;
   padding: 0;
   background-color: #000000;
-  color: #3c484e;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Carter One", cursive;
+}
+
+a {
+  text-decoration: none;
 }
 
 .Header-main {
+  z-index: 2;
+  background: black;
+  position: fixed;
   width: 100%;
   height: 100px;
   display: flex;
@@ -25,9 +31,9 @@ body {
 
 .logo {
   position: absolute;
-  height: 180px;
-  z-index: 1;
-  top: 2%;
+  height: 10vw;
+  z-index: 3;
+  top: 10px;
   width: auto;
 }
 
@@ -37,33 +43,148 @@ body {
   justify-content: center;
 }
 
+.Hero {
+  object-fit: cover;
+  background-image: url("/public/img/star.jpg");
+}
 .hero-img {
+  margin-top: 100px;
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: auto;
   background-size: auto 65vw;
-  margin-bottom: 10%;
-  clip-path: polygon(40% 56%, 46% 56%, 42% 15%, 56% 15%, 53% 56%, 59% 56%, 50% 73%);
+  clip-path: circle(8vw at center);
   transition: all 1.5s;
 }
 
 .hero-img:hover {
-  clip-path: polygon(0% 0%, 0% 50%, 0% 100%, 100% 100%, 100% 50%, 100% 20%, 100% 0%);
+  clip-path: circle(100vw at center);
+}
+
+.Character-item {
+  background: rgba(0, 0, 0, 0.925);
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  transition: 0.5s;
+}
+
+.Character-item:hover {
+  height: 400px;
+}
+
+.Character-item .home_card_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.Character-item .home_card_img img {
+  max-width: 100%;
+  opacity: 0.1;
+  transition: 0.5s;
+}
+
+.Character-item:hover .home_card_img img {
+  opacity: 1;
+}
+
+.Character-item::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -1;
+}
+
+.Character-item::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: 2px;
+  background: #fff;
+  z-index: -2;
+  filter: blur(40px);
+}
+
+.Character-item::before,
+.Character-item::after {
+  background: linear-gradient(
+    45deg,
+    rgba(76, 54, 245, 1) 0%,
+    rgba(76, 54, 245, 1) 4%,
+    rgba(0, 255, 234, 1) 21%,
+    rgba(0, 81, 74, 1) 36%,
+    rgba(0, 0, 0, 1) 43%,
+    rgba(0, 0, 0, 1) 51%,
+    rgba(0, 0, 0, 1) 51%,
+    rgba(0, 0, 0, 1) 53%,
+    rgba(0, 177, 163, 1) 69%,
+    rgba(0, 255, 234, 1) 76%,
+    rgba(17, 0, 255, 1) 93%,
+    rgba(17, 0, 255, 1) 100%
+  );
+}
+
+.Character-item .tittle_name {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 90px;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: 0.5;
+}
+
+.Character-item:hover .tittle_name {
+  opacity: 1;
+}
+
+.Character-item:hover .tittle_name h2 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 1px;
 }
 
 .Characters {
+  background-color: #ffffff07;
   margin: 0 4vw 10vw 4vw;
   flex-wrap: wrap;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 5%;
+  border-radius: 5px;
 }
 
 .Characters-inner {
+  margin-top: 60px;
   display: flex;
   justify-content: center;
 }
 
 .Characters-card {
+  z-index: -3;
+  color: white;
   text-decoration: none;
   box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06), 1px 3px 8px rgba(39, 44, 49, 0.03);
   border-radius: 5px;
@@ -72,19 +193,14 @@ body {
   animation-duration: 2s;
   animation-name: fade;
 }
-.Characters-item a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .Characters-card img {
   width: 100%;
   height: auto;
-  border-radius: 5px 5px 0 0;
+  border-radius: 15px;
 }
 
-.Characters-card h2 {
+.Characters-card a h2 {
   font-size: 18px;
   font-weight: 400;
   text-align: center;
@@ -99,9 +215,8 @@ body {
 
 .Characters-item {
   text-decoration: none;
-  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06), 1px 3px 8px rgba(39, 44, 49, 0.03);
   border-radius: 5px;
-  margin: 0 0 20px 0;
+  margin: 0 50px 50px 0;
   display: flex;
   animation-duration: 2s;
   animation-name: fade;
@@ -111,18 +226,13 @@ body {
 .Characters-item img {
   width: 100%;
   height: auto;
-  border-radius: 5px 5px 0 0;
+  border-radius: 50%;
 }
 
 .Characters-item h2 {
   font-size: 18px;
   font-weight: 300;
   padding: 5px 10px;
-}
-
-.Characters-item a {
-  text-decoration: none;
-  color: #026c86;
 }
 
 @keyframes fade {

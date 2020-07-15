@@ -11,12 +11,12 @@ const Character = async () => {
                 <h2>${character.name}</h2>
             </article>
             <article class="Characters-card">
-                <h3>Episodes:${character.episode.length}</h3>
-                <h3>Status:${character.status}</h3>
-                <h3>Species:${character.species}</h3>
-                <h3>Gender:${character.gender}</h3>
-                <h3>Origin:${character.origin.name}</h3>
-                <h3>Last Location:${character.location.name}</h3>                         
+                <h3>Episodes: ${ character.episode.length}</h3>
+                <h3>Status: ${ character.status}</h3>
+                <h3>Species: ${ character.species}</h3>
+                <h3>Gender: ${ character.gender}</h3>
+                <h3>Origin: ${ character.origin.name}</h3>
+                <h3>Last Location: ${ character.location.name}</h3>                         
             </article>
         </div>
     `;

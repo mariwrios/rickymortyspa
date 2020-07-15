@@ -9,7 +9,7 @@
   <body>
     <main class="Main">
       <header class="header" id="header"></header>
-      <section class="Hero">
+      <section class="Hero" id="Hero">
         <a href="/">
           <img class="logo" src="../../public/img/logo.png" />
         </a>
@@ -20,4 +20,11 @@
       </section>
     </main>
   </body>
+  <script>
+      const section =  document.querySelector('section');
+      window.addEventListener('scroll', () => {
+        let value = window.scrollY;
+        Section.style.clipPath = "circle("+ value + "at center);"
+      })
+  </script>
 </html>
