@@ -11,9 +11,9 @@
       <header class="header" id="header"></header>
       <section class="Hero" id="Hero">
         <a href="/">
-          <img class="logo" src="../../public/img/logo.png" />
+          <img class="logo" src="img/logo.png" />
         </a>
-        <img class="hero-img" src="../public/img/RickyMorty.jpg" />
+        <img class="hero-img" src="img/RickyMorty.jpg" />
       </section>
       <section id="content">
         <div class="loading"></div>
@@ -21,10 +21,10 @@
     </main>
   </body>
   <script>
-      const section =  document.querySelector('section');
-      window.addEventListener('scroll', () => {
-        let value = window.scrollY;
-        Section.style.clipPath = "circle("+ value + "at center);"
-      })
+    const section = document.querySelector("section")
+    window.addEventListener("scroll", () => {
+      let value = window.scrollY
+      Section.style.clipPath = "circle(" + value + "at center);"
+    })
   </script>
 </html>

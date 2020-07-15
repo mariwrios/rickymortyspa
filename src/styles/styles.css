@@ -45,7 +45,7 @@ a {
 
 .Hero {
   object-fit: cover;
-  background-image: url("/public/img/star.jpg");
+  background-image: url("/img/star.jpg");
 }
 .hero-img {
   margin-top: 100px;
