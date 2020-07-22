@@ -6,7 +6,7 @@ import getHash from "../utils/getHast"
 import resolveRoutes from "../utils/resolveRoutes"
 
 const routes = {
-  "https://mariwrios.github.io/rickymortyspa/": Home,
+  "/": Home,
   "/:id": Character,
   "/contact": "Contact"
 }
