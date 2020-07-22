@@ -13,18 +13,23 @@
         <a href="/">
           <img class="logo" src="img/logo.png" />
         </a>
-        <img class="hero-img" src="img/RickyMorty.jpg" />
+        <img id="heroimg" class="hero-img" src="img/RickyMorty.jpg" />
       </section>
       <section id="content">
         <div class="loading"></div>
       </section>
     </main>
+
+    <script>
+      var sectionImg = document.getElementsByClassName("hero-img")
+      window.addEventListener("scroll", function() {
+        var value = window.scrollY
+        if (value === 0) {
+          sectionImg[0].style.clipPath = `circle( 8vw at center)`
+        } else if (value > 20) {
+          sectionImg[0].style.clipPath = `circle(${value * 4}px at center)`
+        }
+      })
+    </script>
   </body>
-  <script>
-    const section = document.querySelector("section")
-    window.addEventListener("scroll", () => {
-      let value = window.scrollY
-      Section.style.clipPath = "circle(" + value + "at center);"
-    })
-  </script>
 </html>

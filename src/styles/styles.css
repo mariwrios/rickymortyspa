@@ -9,6 +9,11 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+
+.tittle_name {
+  cursor: pointer;
 }
 
 .Header-main {
@@ -45,7 +50,7 @@ a {
 
 .Hero {
   object-fit: cover;
-  background-image: url("img/star.jpg");
+  background-image: url("img/star.png");
 }
 .hero-img {
   margin-top: 100px;
@@ -58,7 +63,7 @@ a {
 }
 
 .hero-img:hover {
-  clip-path: circle(100vw at center);
+  clip-path: circle(900px at center);
 }
 
 .Character-item {
@@ -235,6 +240,21 @@ a {
   padding: 5px 10px;
 }
 
+.buttonContainer {
+  margin: 8vw;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  margin: 0 5vw;
+  width: 5vw;
+  height: 4vw;
+  cursor: pointer;
+}
+
 @keyframes fade {
   from {
     opacity: 0;
@@ -259,5 +279,57 @@ a {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .Characters-card {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+  }
+
+  .Characters-card img {
+    height: 250px;
+    width: 250px;
+  }
+
+  .Characters-card h3 {
+    font-size: 0.9em;
+    margin: 5px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .Characters-card img {
+    display: flex;
+    margin: 5px;
+  }
+
+  .Characters-card img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .Characters-card h3 {
+    font-size: 0.8em;
+    margin: 5px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  Characters-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Characters-card img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .Characters-card h3 {
+    font-size: 0.75em;
+    margin: 10px;
   }
 }
