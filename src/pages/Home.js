@@ -1,7 +1,8 @@
-import getData from "../utils/getData"
+import { getData, getPage } from "../utils/getData"
 
 const Home = async () => {
   const characters = await getData()
+  const num = await getPage()
 
   const view = `
     <div class="Characters">
