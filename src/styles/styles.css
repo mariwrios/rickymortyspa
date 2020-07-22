@@ -27,6 +27,12 @@ a {
   align-items: center;
 }
 
+.Error404 {
+  font-size: 9vw;
+  color: #f3f3f3;
+  text-align: center;
+}
+
 .Header-nav a {
   margin: 20px;
   text-decoration: none;
